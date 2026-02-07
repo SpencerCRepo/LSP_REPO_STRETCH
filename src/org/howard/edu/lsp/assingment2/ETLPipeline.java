@@ -1,4 +1,4 @@
-package org.howard.edu.lsp.assingment2;
+package org.howard.edu.lsp.assignment2;
 
 
 import java.io.*;
