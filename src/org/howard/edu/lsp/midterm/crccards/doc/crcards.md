@@ -1,0 +1,1 @@
+The TaskManager collaboartes with Task since it needs to interact with Task to finish it's responsibilites. 

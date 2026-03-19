@@ -6,10 +6,8 @@ package org.howard.edu.lsp.midterm.strategy;
 public class PriceCalculator {
     private PricingStrategy strategy;
 
-    /**
-     * Sets the pricing strategy to use.
-     * @param strategy the concrete strategy implementation
-     */
+
+
     public void setStrategy(PricingStrategy strategy) {
         this.strategy = strategy;
     }
