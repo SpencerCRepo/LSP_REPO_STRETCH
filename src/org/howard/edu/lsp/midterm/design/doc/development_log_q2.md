@@ -1,0 +1,1 @@
+No AI tools, web searches, Stack Overflow, textbooks, or other external help were used for Question 2.

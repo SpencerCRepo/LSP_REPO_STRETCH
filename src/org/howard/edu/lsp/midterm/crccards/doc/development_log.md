@@ -1,0 +1,1 @@
+I looked back at the Finding objects with CRC cards slides. It define responsibilities as what each knows or does, and determine collaborators by asking who needs whose services. That made it obvious why TaskManager depends on Task but Task is independent.  

@@ -1,1 +1,1 @@
-The TaskManager collaboartes with Task since it needs to interact with Task to finish it's responsibilites. 
+The TaskManager collaborates with Task since it needs to interact with Task to finish its responsibilities. Task does not collaborate with TaskManager at all. The responsibilitiesare entirely self-contained. Task never needs to know about the manager or any other tasks. This one-directional relationship is exactly what the CRC cards show.
