@@ -1,0 +1,1 @@
+The PriceCalculator goes against certain design principles. 
