@@ -1,4 +1,7 @@
 package org.howard.edu.lsp.midterm.strategy;
 
-public class PricingStrategy {
+/** Strategy for calculating price. */
+public interface PricingStrategy {
+    /** Calculates final price. */
+    double calculatePrice(double price);
 }

@@ -1,24 +1,28 @@
 package org.howard.edu.lsp.midterm.strategy;
 
+/**
+ * Context class that uses a PricingStrategy (Strategy Pattern).
+ */
 public class PriceCalculator {
+    private PricingStrategy strategy;
 
-    public double calculatePrice(String customerType, double price) {
+    /**
+     * Sets the pricing strategy to use.
+     * @param strategy the concrete strategy implementation
+     */
+    public void setStrategy(PricingStrategy strategy) {
+        this.strategy = strategy;
+    }
 
-        double finalPrice = price;
-
-        if (customerType.equals("REGULAR")) {
-            finalPrice = price;
+    /**
+     * Calculates the final price using the current strategy.
+     * @param price the original purchase price
+     * @return the discounted/final price
+     */
+    public double calculatePrice(double price) {
+        if (strategy == null) {
+            throw new IllegalStateException("No pricing strategy has been set");
         }
-        if (customerType.equals("MEMBER")) {
-            finalPrice = price * 0.90;
-        }
-        if (customerType.equals("VIP")) {
-            finalPrice = price * 0.80;
-        }
-        if (customerType.equals("HOLIDAY")) {
-            finalPrice = price * 0.85;
-        }
-
-        return finalPrice;
+        return strategy.calculatePrice(price);
     }
 }

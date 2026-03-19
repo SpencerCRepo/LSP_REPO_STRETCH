@@ -1,1 +1,1 @@
-The PriceCalculator goes against certain design principles. 
+The PriceCalculator goes against certain design principles. The discount calculation is an algorithmic dependency. Adding a new customer type or changing any discount requires modifying the PriceCalculator class itself which violates the open-closed principle and makes maintenance difficult. Each discount algorithm is now encapsulated in its own class such as RegularPricingStrategy and MemberPricingStrategy. 
