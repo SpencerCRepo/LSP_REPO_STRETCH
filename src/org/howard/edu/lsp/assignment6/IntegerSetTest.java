@@ -1,5 +1,6 @@
-package org.howard.edu.lsp.assignment5;
+package org.howard.edu.lsp.assignment6;
 
+import org.howard.edu.lsp.assignment5.IntegerSet;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
