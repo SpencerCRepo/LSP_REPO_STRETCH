@@ -1,0 +1,21 @@
+
+
+
+Prompts:
+
+if addRequest calls getNextId inside it, and
+addRequest is synchronized, does that mean
+getNextId is also protected? or does getNextId
+need its own synchronized too
+
+
+ChatGPT:
+
+No, getNextId is not automatically protected just because addRequest (which is synchronized) calls it.
+How Java synchronization works here
+When a thread enters a synchronized instance method (addRequest), it acquires the intrinsic lock (monitor) on the current object (this).
+
+While that thread holds the lock, no other thread can enter any other synchronized method (or synchronized(this) block) on the same object.
+However, non-synchronized methods (or code) can still be executed by other threads at the same time — they don't check or acquire that lock.
+
+So if getNextId is not synchronized, another thread can call getNextId directly (or through another unsynchronized path) while the first thread is inside addRequest. This can lead to race conditions if getNextId reads/writes shared state (e.g., an ID counter).
