@@ -9,7 +9,8 @@ exposing it.
 <><><><><><><>
 Heuristic 2: 
 Name: H3.2 No god classes in your system
-Explanation: T
+Explanation: Hoards up all the data into one place, which can lose the quality of the code. Making it longer and more 
+difficult to understand. It's important for everything not to be centralized.
 
 
 <><><><><><><>
