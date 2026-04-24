@@ -1,3 +1,4 @@
+Part 1
 1. Identify two shared resources.
 
 Two of the shared resourses are requests and nextId()
@@ -9,3 +10,24 @@ I think that it's a race condition since they aren't synched which can cause mul
 3. Why is addRequest() unsafe?
 
 It's unsafe because of two operations that can run at the same time which can then both call requests.add(). 
+
+Part 2
+
+Fix A: These fix won't work since you can still call requests.add() concurrently, which will corrupt the Array.
+
+Fix B:
+
+Fix C: This only syncs the read methods and will not fix the problem. It still allows
+
+Part 3
+1. Based on Arthur’s Riel’s heuristics, should getNextId() be public? Explain.
+
+It shouldn't be public because it's important to keep data hidedn within it's class. It should be private so RequestManager controls
+ID generation entirely on its own.
+
+    
+
+Part 4
+In lecture, we discussed an alternative approach to managing concurrency that does not rely on the synchronized keyword.
+Describe how this alternative approach could be used to make addRequest() thread-safe.
+Provide a short code snippet (5–10 lines) demonstrating how this approach would be applied to make addRequest()thread-safe.
